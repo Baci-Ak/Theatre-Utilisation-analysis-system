@@ -1,0 +1,47 @@
+TreatmentFunction,CaseType,NumberOfCases
+Anaesthetic,Elective,67
+Anaesthetic,Emergency,53
+Anaesthetic,Unknown,3
+Cardiology,Elective,2
+Cardiology,Emergency,40
+Dermatology,Elective,43
+Ear Nose and Throat,Elective,1566
+Ear Nose and Throat,Emergency,142
+Ear Nose and Throat,Unknown,1
+General Surgery,Elective,2516
+General Surgery,Emergency,1275
+General Surgery,Unknown,6
+Gynaecology,Elective,1582
+Gynaecology,Emergency,386
+Gynaecology,Unknown,1164
+Interventional Radiology,Elective,919
+Interventional Radiology,Emergency,36
+Obstetrics,Elective,820
+Obstetrics,Emergency,20
+Ophthalmology,Elective,3427
+Ophthalmology,Emergency,68
+Ophthalmology,Unknown,9
+Oral Surgery,Elective,916
+Oral Surgery,Emergency,296
+Oral Surgery,Unknown,3
+Paediatric,Elective,672
+Paediatric,Emergency,321
+Paediatric,Unknown,4
+Pain Management,Elective,1553
+Pain Management,Emergency,4
+Plastic Surgery,Elective,2840
+Plastic Surgery,Emergency,667
+Plastic Surgery,Not Recorded,1
+Plastic Surgery,Unknown,10
+Thoracic Surgery,Elective,434
+Thoracic Surgery,Emergency,140
+Thoracic Surgery,Unknown,4
+Trauma and Orthopaedic,Elective,3747
+Trauma and Orthopaedic,Emergency,1936
+Trauma and Orthopaedic,Unknown,1
+Urology,Elective,3662
+Urology,Emergency,290
+Urology,Unknown,3
+Vascular Surgery,Elective,574
+Vascular Surgery,Emergency,504
+Vascular Surgery,Unknown,3
