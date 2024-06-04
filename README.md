@@ -75,5 +75,5 @@ To get a local copy up and running follow these simple steps:
 
 ## Live Application
 
-Explore the live application [here](your-live-app-link).
+Explore the live application [here](https://theatre-utilisation-analysis-system.streamlit.app/).
 ```
