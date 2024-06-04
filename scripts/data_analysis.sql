@@ -121,3 +121,71 @@ SELECT
 FROM Business_Analyst_Test_Theatre_Cases
 WHERE CaseType = 'Elective' AND TreatmentFunction = 'Ophthalmology';
 
+
+
+-------------   SQL Query to find the top 5 consultants with the most late starts ------------
+SELECT TOP 5
+    Consultant,
+    COUNT(*) AS LateStarts
+FROM Business_Analyst_Test_Theatre_Cases
+WHERE CaseType = 'Elective' AND TreatmentFunction = 'Ophthalmology' AND LateStart = 1
+GROUP BY Consultant
+ORDER BY LateStarts DESC;
+
+
+------  theatres with the most late starts   --------
+SELECT TOP 5
+    TheatreName,
+    COUNT(*) AS LateStarts
+FROM Business_Analyst_Test_Theatre_Cases
+WHERE CaseType = 'Elective' AND TreatmentFunction = 'Ophthalmology' AND LateStart = 1
+GROUP BY TheatreName
+ORDER BY LateStarts DESC;
+
+------   the theatre with the most early finishes   ------------
+SELECT TOP 10
+    TheatreName,
+    COUNT(*) AS EarlyFinishes
+FROM Business_Analyst_Test_Theatre_Cases
+WHERE CaseType = 'Elective' AND TreatmentFunction = 'Ophthalmology' AND EarlyFinish = 1
+GROUP BY TheatreName
+ORDER BY EarlyFinishes DESC;
+
+
+
+------- identify the top 10 most efficient Ophthalmology procedures by shortest average duration
+SELECT TOP 10
+    ProcedureName,
+    AVG(DurationOfSurgeryMinutes) AS AverageDuration
+FROM
+    Business_Analyst_Test_Theatre_Cases
+WHERE
+    CaseType = 'Elective' AND TreatmentFunction = 'Ophthalmology'
+GROUP BY
+    ProcedureName
+ORDER BY
+    AverageDuration ASC;  -- Ascending order to get the shortest durations at the top
+
+
+
+---------   calculate potential income for the top five efficient Ophthalmology procedures -----------
+SELECT
+    a.ProcedureName,
+    b.Income,
+    a.AverageDuration
+FROM
+    (SELECT TOP 10
+        ProcedureName,
+        AVG(DurationOfSurgeryMinutes) AS AverageDuration
+     FROM
+        Business_Analyst_Test_Theatre_Cases
+     WHERE
+        CaseType = 'Elective' AND TreatmentFunction = 'Ophthalmology'
+     GROUP BY
+        ProcedureName
+     ORDER BY
+        AverageDuration ASC) a
+JOIN
+    NHS_Biz_Ophthalmology_Income b ON a.ProcedureName = b.Procedure_Name;
+
+
