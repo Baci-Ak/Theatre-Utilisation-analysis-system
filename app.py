@@ -264,7 +264,7 @@ ophthalmology_income = load_data('NHS_Trust_Theatre_Utilisation_Efficiency_Dashb
 # Conditional rendering based on navigation selection
 if st.session_state.current_page == "Home":
     st.title('Theatre Utilisation Dashboard')
-    st.image("Images/Homebanner.png", use_column_width=True)
+    st.image("Images/Homebanner1.png", use_column_width=True)
     st.markdown('''
 #### Overview
 Welcome to the Theatre Utilisation Dashboard, a sophisticated tool designed to enhance operational efficiency in surgical environments. This system leverages advanced data processing technologies to provide deep insights into theatre operations, supporting strategic planning and resource management.
